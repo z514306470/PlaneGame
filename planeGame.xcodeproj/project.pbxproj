@@ -7,13 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1827FE7B19FC704400746DFE /* PlaneGameStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 1827FE7A19FC704400746DFE /* PlaneGameStatus.m */; };
+		1827FE7E19FC7F5D00746DFE /* PlaneGameBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = 1827FE7D19FC7F5D00746DFE /* PlaneGameBackground.m */; };
+		1827FE8119FC85B400746DFE /* PlaneGameEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1827FE8019FC85B400746DFE /* PlaneGameEnemy.m */; };
+		1827FE8419FCABD900746DFE /* PlaneGameBullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1827FE8319FCABD900746DFE /* PlaneGameBullet.m */; };
 		182DE79E19FBB2A400C728AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DE79D19FBB2A400C728AA /* main.m */; };
 		182DE7A119FBB2A400C728AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DE7A019FBB2A400C728AA /* AppDelegate.m */; };
-		182DE7A419FBB2A400C728AA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DE7A319FBB2A400C728AA /* ViewController.m */; };
 		182DE7A719FBB2A400C728AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182DE7A519FBB2A400C728AA /* Main.storyboard */; };
 		182DE7A919FBB2A400C728AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182DE7A819FBB2A400C728AA /* Images.xcassets */; };
 		182DE7AC19FBB2A400C728AA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182DE7AA19FBB2A400C728AA /* LaunchScreen.xib */; };
 		182DE7B819FBB2A400C728AA /* planeGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DE7B719FBB2A400C728AA /* planeGameTests.m */; };
+		182DE7C519FBB3B600C728AA /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182DE7C419FBB3B600C728AA /* SpriteKit.framework */; };
+		182DE7C819FBB51300C728AA /* PlaneGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DE7C719FBB51300C728AA /* PlaneGameViewController.m */; };
+		182DE7CB19FBB57900C728AA /* PlaneGameStartScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DE7CA19FBB57900C728AA /* PlaneGameStartScene.m */; };
+		182DE7D219FBBD3400C728AA /* action_world1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 182DE7CD19FBBD3400C728AA /* action_world1.mp3 */; };
+		182DE7D319FBBD3400C728AA /* destroyer_lazer3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 182DE7CE19FBBD3400C728AA /* destroyer_lazer3.mp3 */; };
+		182DE7D419FBBD3400C728AA /* explosion4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 182DE7CF19FBBD3400C728AA /* explosion4.mp3 */; };
+		182DE7D519FBBD3400C728AA /* t.WAV in Resources */ = {isa = PBXBuildFile; fileRef = 182DE7D019FBBD3400C728AA /* t.WAV */; };
+		182DE7D619FBBD3400C728AA /* up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 182DE7D119FBBD3400C728AA /* up.mp3 */; };
+		182DE7D919FBC44400C728AA /* PlaneGameMainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DE7D819FBC44400C728AA /* PlaneGameMainScene.m */; };
+		182DE7E119FBE57C00C728AA /* PlaneGameFighter.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DE7E019FBE57C00C728AA /* PlaneGameFighter.m */; };
+		1893D57019FD138A004EF620 /* PlaneGameBomb.m in Sources */ = {isa = PBXBuildFile; fileRef = 1893D56F19FD138A004EF620 /* PlaneGameBomb.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +41,41 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1827FE7919FC704400746DFE /* PlaneGameStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaneGameStatus.h; sourceTree = "<group>"; };
+		1827FE7A19FC704400746DFE /* PlaneGameStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaneGameStatus.m; sourceTree = "<group>"; };
+		1827FE7C19FC7F5D00746DFE /* PlaneGameBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaneGameBackground.h; sourceTree = "<group>"; };
+		1827FE7D19FC7F5D00746DFE /* PlaneGameBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaneGameBackground.m; sourceTree = "<group>"; };
+		1827FE7F19FC85B400746DFE /* PlaneGameEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaneGameEnemy.h; sourceTree = "<group>"; };
+		1827FE8019FC85B400746DFE /* PlaneGameEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaneGameEnemy.m; sourceTree = "<group>"; };
+		1827FE8219FCABD900746DFE /* PlaneGameBullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaneGameBullet.h; sourceTree = "<group>"; };
+		1827FE8319FCABD900746DFE /* PlaneGameBullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaneGameBullet.m; sourceTree = "<group>"; };
 		182DE79819FBB2A400C728AA /* planeGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = planeGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		182DE79C19FBB2A400C728AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182DE79D19FBB2A400C728AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		182DE79F19FBB2A400C728AA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		182DE7A019FBB2A400C728AA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		182DE7A219FBB2A400C728AA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		182DE7A319FBB2A400C728AA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		182DE7A619FBB2A400C728AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		182DE7A819FBB2A400C728AA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		182DE7AB19FBB2A400C728AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		182DE7B119FBB2A400C728AA /* planeGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = planeGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		182DE7B619FBB2A400C728AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182DE7B719FBB2A400C728AA /* planeGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = planeGameTests.m; sourceTree = "<group>"; };
+		182DE7C419FBB3B600C728AA /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		182DE7C619FBB51300C728AA /* PlaneGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaneGameViewController.h; sourceTree = "<group>"; };
+		182DE7C719FBB51300C728AA /* PlaneGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaneGameViewController.m; sourceTree = "<group>"; };
+		182DE7C919FBB57900C728AA /* PlaneGameStartScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaneGameStartScene.h; sourceTree = "<group>"; };
+		182DE7CA19FBB57900C728AA /* PlaneGameStartScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaneGameStartScene.m; sourceTree = "<group>"; };
+		182DE7CD19FBBD3400C728AA /* action_world1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = action_world1.mp3; sourceTree = "<group>"; };
+		182DE7CE19FBBD3400C728AA /* destroyer_lazer3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = destroyer_lazer3.mp3; sourceTree = "<group>"; };
+		182DE7CF19FBBD3400C728AA /* explosion4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion4.mp3; sourceTree = "<group>"; };
+		182DE7D019FBBD3400C728AA /* t.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = t.WAV; sourceTree = "<group>"; };
+		182DE7D119FBBD3400C728AA /* up.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = up.mp3; sourceTree = "<group>"; };
+		182DE7D719FBC44400C728AA /* PlaneGameMainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaneGameMainScene.h; sourceTree = "<group>"; };
+		182DE7D819FBC44400C728AA /* PlaneGameMainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaneGameMainScene.m; sourceTree = "<group>"; };
+		182DE7DF19FBE57C00C728AA /* PlaneGameFighter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaneGameFighter.h; sourceTree = "<group>"; };
+		182DE7E019FBE57C00C728AA /* PlaneGameFighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaneGameFighter.m; sourceTree = "<group>"; };
+		1893D56E19FD138A004EF620 /* PlaneGameBomb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaneGameBomb.h; sourceTree = "<group>"; };
+		1893D56F19FD138A004EF620 /* PlaneGameBomb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaneGameBomb.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182DE7C519FBB3B600C728AA /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,11 +120,28 @@
 			children = (
 				182DE79F19FBB2A400C728AA /* AppDelegate.h */,
 				182DE7A019FBB2A400C728AA /* AppDelegate.m */,
-				182DE7A219FBB2A400C728AA /* ViewController.h */,
-				182DE7A319FBB2A400C728AA /* ViewController.m */,
+				182DE7C619FBB51300C728AA /* PlaneGameViewController.h */,
+				182DE7C719FBB51300C728AA /* PlaneGameViewController.m */,
+				182DE7C919FBB57900C728AA /* PlaneGameStartScene.h */,
+				182DE7CA19FBB57900C728AA /* PlaneGameStartScene.m */,
+				182DE7D719FBC44400C728AA /* PlaneGameMainScene.h */,
+				182DE7D819FBC44400C728AA /* PlaneGameMainScene.m */,
+				1827FE7C19FC7F5D00746DFE /* PlaneGameBackground.h */,
+				1827FE7D19FC7F5D00746DFE /* PlaneGameBackground.m */,
+				1827FE7919FC704400746DFE /* PlaneGameStatus.h */,
+				1827FE7A19FC704400746DFE /* PlaneGameStatus.m */,
+				182DE7DF19FBE57C00C728AA /* PlaneGameFighter.h */,
+				182DE7E019FBE57C00C728AA /* PlaneGameFighter.m */,
+				1827FE7F19FC85B400746DFE /* PlaneGameEnemy.h */,
+				1827FE8019FC85B400746DFE /* PlaneGameEnemy.m */,
+				1893D56E19FD138A004EF620 /* PlaneGameBomb.h */,
+				1893D56F19FD138A004EF620 /* PlaneGameBomb.m */,
+				1827FE8219FCABD900746DFE /* PlaneGameBullet.h */,
+				1827FE8319FCABD900746DFE /* PlaneGameBullet.m */,
 				182DE7A519FBB2A400C728AA /* Main.storyboard */,
-				182DE7A819FBB2A400C728AA /* Images.xcassets */,
 				182DE7AA19FBB2A400C728AA /* LaunchScreen.xib */,
+				182DE7A819FBB2A400C728AA /* Images.xcassets */,
+				182DE7CC19FBBD1B00C728AA /* res */,
 				182DE79B19FBB2A400C728AA /* Supporting Files */,
 			);
 			path = planeGame;
@@ -96,6 +150,7 @@
 		182DE79B19FBB2A400C728AA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				182DE7C419FBB3B600C728AA /* SpriteKit.framework */,
 				182DE79C19FBB2A400C728AA /* Info.plist */,
 				182DE79D19FBB2A400C728AA /* main.m */,
 			);
@@ -117,6 +172,18 @@
 				182DE7B619FBB2A400C728AA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		182DE7CC19FBBD1B00C728AA /* res */ = {
+			isa = PBXGroup;
+			children = (
+				182DE7CD19FBBD3400C728AA /* action_world1.mp3 */,
+				182DE7CE19FBBD3400C728AA /* destroyer_lazer3.mp3 */,
+				182DE7CF19FBBD3400C728AA /* explosion4.mp3 */,
+				182DE7D019FBBD3400C728AA /* t.WAV */,
+				182DE7D119FBBD3400C728AA /* up.mp3 */,
+			);
+			name = res;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,8 +267,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				182DE7A719FBB2A400C728AA /* Main.storyboard in Resources */,
+				182DE7D619FBBD3400C728AA /* up.mp3 in Resources */,
+				182DE7D219FBBD3400C728AA /* action_world1.mp3 in Resources */,
+				182DE7D519FBBD3400C728AA /* t.WAV in Resources */,
 				182DE7AC19FBB2A400C728AA /* LaunchScreen.xib in Resources */,
+				182DE7D319FBBD3400C728AA /* destroyer_lazer3.mp3 in Resources */,
 				182DE7A919FBB2A400C728AA /* Images.xcassets in Resources */,
+				182DE7D419FBBD3400C728AA /* explosion4.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +291,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				182DE7A419FBB2A400C728AA /* ViewController.m in Sources */,
+				1827FE8419FCABD900746DFE /* PlaneGameBullet.m in Sources */,
 				182DE7A119FBB2A400C728AA /* AppDelegate.m in Sources */,
 				182DE79E19FBB2A400C728AA /* main.m in Sources */,
+				1827FE7E19FC7F5D00746DFE /* PlaneGameBackground.m in Sources */,
+				182DE7E119FBE57C00C728AA /* PlaneGameFighter.m in Sources */,
+				182DE7D919FBC44400C728AA /* PlaneGameMainScene.m in Sources */,
+				1827FE7B19FC704400746DFE /* PlaneGameStatus.m in Sources */,
+				1827FE8119FC85B400746DFE /* PlaneGameEnemy.m in Sources */,
+				1893D57019FD138A004EF620 /* PlaneGameBomb.m in Sources */,
+				182DE7CB19FBB57900C728AA /* PlaneGameStartScene.m in Sources */,
+				182DE7C819FBB51300C728AA /* PlaneGameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +424,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = planeGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +435,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = planeGame/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -412,6 +494,7 @@
 				182DE7BD19FBB2A400C728AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		182DE7BE19FBB2A400C728AA /* Build configuration list for PBXNativeTarget "planeGameTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +503,7 @@
 				182DE7C019FBB2A400C728AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
