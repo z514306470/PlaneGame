@@ -18,9 +18,10 @@
     NSMutableArray *enemyFrameMutAry;
 }
 
-- (instancetype)init
+- (instancetype)initWithDirection:(appearDirection)direction
 {
     self = [super init];
+    _direction = direction;
     if (self) {
         SKTexture *enemyTexture = [SKTexture textureWithImageNamed:@"enemy_duck"];
         enemyFrameMutAry = [NSMutableArray arrayWithCapacity:10];
@@ -31,7 +32,12 @@
         
         self.name = @"enemy";
         self.size = CGSizeMake(54, 54);
-        self.position = CGPointMake(0, 500);
+        if (direction == leftDirection) {
+            self.position = CGPointMake(0, 500);
+        }else if (direction == rightDirection){
+            self.position = CGPointMake(ScreenWidth, 500);
+        }
+        
         SKAction *frameAciton = [SKAction repeatActionForever:[SKAction animateWithTextures:enemyFrameMutAry timePerFrame:0.2]];
         SKAction *moveTo = [SKAction moveTo:CGPointMake(ScreenWidth/2, 0) duration:500/ScreenHeight*7];
         [self runAction:[SKAction group:@[frameAciton,moveTo]]];
