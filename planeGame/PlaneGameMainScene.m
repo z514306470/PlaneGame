@@ -183,12 +183,15 @@
         if (CGRectIntersectsRect(fighter.frame, node.frame)) {
             [node removeFromParent];
             
+            //player hp
             if (status.healths>0) {
                 status.healths = status.healths-1;
-                [status updateStatus];
-            }else{
-                PlaneGameOverScene *overScene = [[PlaneGameOverScene alloc] initWithSize:self.view.bounds.size];
-                [self.view presentScene:overScene];
+                if (status.healths==0) {
+                    PlaneGameOverScene *overScene = [[PlaneGameOverScene alloc] initWithSize:self.view.bounds.size];
+                    [self.view presentScene:overScene];
+                }else{
+                    [status updateStatus];
+                }
             }
             
             [self addBoomEffect:node.position];
@@ -204,10 +207,12 @@
             [node removeFromParent];
             if (status.bossHp>0) {
                 status.bossHp = status.bossHp-1;
-                [status updateBossHp];
-            }else{
-                PlaneGameWinScene *winScene = [[PlaneGameWinScene alloc] initWithSize:self.view.bounds.size];
-                [self.view presentScene:winScene];
+                if (status.bossHp==0) {
+                    PlaneGameWinScene *winScene = [[PlaneGameWinScene alloc] initWithSize:self.view.bounds.size];
+                    [self.view presentScene:winScene];
+                }else{
+                    [status updateBossHp];
+                }
             }
         }
     }];

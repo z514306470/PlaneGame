@@ -30,10 +30,10 @@
 }
 
 -(void)initScoreLable{
-    SKLabelNode *scoreTip = [SKLabelNode labelNodeWithText:@"得分："];
+    SKLabelNode *scoreTip = [[SKLabelNode alloc] initWithFontNamed:@"Arial Rounded MT Bold"];
+    scoreTip.text = @"得分：";
     scoreTip.fontSize = 18;
     scoreTip.fontColor = [SKColor redColor];
-    scoreTip.fontName = @"Arial Rounded MT Bold";
     scoreTip.position = CGPointMake(ScreenWidth-70, ScreenHeight-25);
     [self addChild:scoreTip];
     
@@ -43,10 +43,10 @@
     }else{
         scoreStr = [NSString stringWithFormat:@"%d",_score];
     }
-    scoreLable = [SKLabelNode labelNodeWithText:scoreStr];
+    scoreLable = [[SKLabelNode alloc] initWithFontNamed:@"Arial Rounded MT Bold"];
+    scoreLable.text = scoreStr;
     scoreLable.fontSize = 18;
     scoreLable.fontColor = [SKColor redColor];
-    scoreLable.fontName = @"Arial Rounded MT Bold";
     scoreLable.position = CGPointMake(ScreenWidth-30, ScreenHeight-25);
     [self addChild:scoreLable];
 }
