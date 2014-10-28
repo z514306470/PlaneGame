@@ -12,6 +12,9 @@
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 
 #import "PlaneGameMainScene.h"
+#import "PlaneGameOverScene.h"
+#import "PlaneGameWinScene.h"
+
 #import "PlaneGameFighter.h"
 #import "PlaneGameBackground.h"
 #import "PlaneGameStatus.h"
@@ -74,19 +77,36 @@
         //bomb and fighter collision detect
         [self detectBombAndFithter];
     }else{
-        //clear other sprite
-        [self enumerateChildNodesWithName:@"bomb" usingBlock:^(SKNode *node, BOOL *stop) {
-            [node removeFromParent];
-        }];
-        [self enumerateChildNodesWithName:@"enemy" usingBlock:^(SKNode *node, BOOL *stop) {
-            [node removeFromParent];
-        }];
-        //init boss
         
+        //init boss
         if (!isBossAppear) {
+            //clear other sprite
+            [self enumerateChildNodesWithName:@"bomb" usingBlock:^(SKNode *node, BOOL *stop) {
+                [node removeFromParent];
+            }];
+            [self enumerateChildNodesWithName:@"enemy" usingBlock:^(SKNode *node, BOOL *stop) {
+                [node removeFromParent];
+            }];
+            
+            //change background
+            PlaneGameBackground *background = (PlaneGameBackground*)[self childNodeWithName:@"background"];
+            [background initBackgroundWithImageName:@"background"];
+            
             PlaneGameBoss *boss = [[PlaneGameBoss alloc] init];
             [self addChild:boss];
+            
+            //init boss hp
+            status.bossHp = 20;
+            [status updateBossHp];
         }
+        //clear bomb
+        [self enumerateChildNodesWithName:@"bomb" usingBlock:^(SKNode *node, BOOL *stop) {
+            if (node.position.y == 0) {
+                [node removeFromParent];
+            }
+        }];
+        
+        [self detectBombAndFithter];
         [self detectBulletAndBoss];
         isBossAppear = YES;
     }
@@ -107,7 +127,7 @@
         switch (enemy.direction) {
             case leftDirection:
                 if (enemy.position.y>0&&x%24 == 0) {
-                    PlaneGameBomb *bomb = [[PlaneGameBomb alloc] init];
+                    PlaneGameBomb *bomb = [[PlaneGameBomb alloc] initWithImageNamed:@"dilei"];
                     CGPoint enemyPoint = enemy.position;
                     bomb.position = CGPointMake(enemyPoint.x, enemyPoint.y-10);
                     SKAction *moveTo = [SKAction moveToY:0 duration:bomb.position.y/ScreenHeight*7];
@@ -118,7 +138,7 @@
                 
             case rightDirection:
                 if (enemy.position.y>0&&((int)ScreenWidth-x)%24 == 0) {
-                    PlaneGameBomb *bomb = [[PlaneGameBomb alloc] init];
+                    PlaneGameBomb *bomb = [[PlaneGameBomb alloc] initWithImageNamed:@"dilei"];
                     CGPoint enemyPoint = enemy.position;
                     bomb.position = CGPointMake(enemyPoint.x, enemyPoint.y-10);
                     SKAction *moveTo = [SKAction moveToY:0 duration:bomb.position.y/ScreenHeight*7];
@@ -131,6 +151,8 @@
             default:
                 break;
         }
+        
+        //clear bomb
         [self enumerateChildNodesWithName:@"bomb" usingBlock:^(SKNode *node, BOOL *stop) {
             if (node.position.y == 0) {
                 [node removeFromParent];
@@ -145,7 +167,7 @@
     //bullet and enemy collision detect
     [self enumerateChildNodesWithName:@"bullet" usingBlock:^(SKNode *node, BOOL *stop) {
         if (CGRectIntersectsRect(node.frame, enemy.frame)) {
-            node.hidden = YES;
+            [node removeFromParent];
             [enemy removeFromParent];
             
             status.score = status.score+30;
@@ -163,8 +185,11 @@
             
             if (status.healths>0) {
                 status.healths = status.healths-1;
+                [status updateStatus];
+            }else{
+                PlaneGameOverScene *overScene = [[PlaneGameOverScene alloc] initWithSize:self.view.bounds.size];
+                [self.view presentScene:overScene];
             }
-            [status updateStatus];
             
             [self addBoomEffect:node.position];
         }
@@ -175,8 +200,15 @@
     PlaneGameBoss *boss = (PlaneGameBoss *)[self childNodeWithName:@"boss"];
     [self enumerateChildNodesWithName:@"bullet" usingBlock:^(SKNode *node, BOOL *stop) {
         if (CGRectIntersectsRect(boss.frame, node.frame)) {
-            [self addBoomEffect:node.position];
-            node.hidden = YES;
+            [self addBossBoomEffect:node.position];
+            [node removeFromParent];
+            if (status.bossHp>0) {
+                status.bossHp = status.bossHp-1;
+                [status updateBossHp];
+            }else{
+                PlaneGameWinScene *winScene = [[PlaneGameWinScene alloc] initWithSize:self.view.bounds.size];
+                [self.view presentScene:winScene];
+            }
         }
     }];
 }
@@ -187,6 +219,26 @@
     NSMutableArray* boomFrameMutAry = [NSMutableArray arrayWithCapacity:7];
     for (int i = 0; i<7; i++) {
         SKTexture *temTexture = [SKTexture textureWithRect:CGRectMake(1.0/7*i, 0, 1.0/7, 1) inTexture:boomTexture];
+        [boomFrameMutAry addObject:temTexture];
+    }
+    
+    SKAction *frameAciton = [SKAction animateWithTextures:boomFrameMutAry timePerFrame:0.1];
+    SKSpriteNode *boom = [[SKSpriteNode alloc] init];
+    boom.position = position;
+    
+    boom.size = CGSizeMake(44, 49);
+    [self addChild:boom];
+    [boom runAction:frameAciton completion:^{
+        [boom removeFromParent];
+    }];
+}
+
+-(void)addBossBoomEffect:(CGPoint)position{
+    //init boom
+    SKTexture *boomTexture = [SKTexture textureWithImageNamed:@"boos_boom"];
+    NSMutableArray* boomFrameMutAry = [NSMutableArray arrayWithCapacity:5];
+    for (int i = 0; i<5; i++) {
+        SKTexture *temTexture = [SKTexture textureWithRect:CGRectMake(1.0/5*i, 0, 1.0/5, 1) inTexture:boomTexture];
         [boomFrameMutAry addObject:temTexture];
     }
     

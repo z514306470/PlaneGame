@@ -15,12 +15,11 @@
 
 @implementation PlaneGameBomb
 
--(instancetype)init{
-    if (self = [super initWithImageNamed:@"dilei"]) {
+-(instancetype)initWithImageNamed:(NSString *)name{
+    if (self = [super initWithImageNamed:name]) {
         self.size = CGSizeMake(24, 24);
         self.name = @"bomb";
     }
     return self;
 }
-
 @end

@@ -43,7 +43,7 @@
         }];
         [self.parent addChild:temBullet];
     }];
-    SKAction *waitAction = [SKAction waitForDuration:0.2];
+    SKAction *waitAction = [SKAction waitForDuration:0.4];
     
     [self runAction:[SKAction repeatActionForever:[SKAction sequence:@[addBulletAction,waitAction]]]];
     

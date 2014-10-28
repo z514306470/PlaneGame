@@ -11,7 +11,9 @@
 @interface PlaneGameStatus : SKNode
 @property(nonatomic) int healths;
 @property(nonatomic) int score;
+@property(nonatomic) int bossHp;
 
 -(void)updateStatus;
 -(void)updateScore;
+-(void)updateBossHp;
 @end

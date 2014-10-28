@@ -23,11 +23,6 @@
         startBg.size = CGSizeMake(ScreenWidth, ScreenHeight);
         [self addChild:startBg];
         
-        //start button
-//        UIButton *startBut = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 150, 50)];
-//        startBut.center = CGPointMake(ScreenWidth/2, ScreenHeight-70);
-//        [startBut addTarget:self action:@selector(gameStart) forControlEvents:UIControlEventTouchUpInside];
-        
         SKSpriteNode *startBut = [SKSpriteNode spriteNodeWithImageNamed:@"button"];
         startBut.name = @"start";
         startBut.position = CGPointMake(ScreenWidth/2, 0.2*ScreenHeight);
@@ -44,7 +39,6 @@
         if ([node.name isEqualToString:@"start"]) {
             SKTexture *temTex = [SKTexture textureWithImageNamed:@"button_press"];
             ((SKSpriteNode *)node).texture = temTex;
-            
             
         }
     }

@@ -27,6 +27,8 @@
 		182DE7D619FBBD3400C728AA /* up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 182DE7D119FBBD3400C728AA /* up.mp3 */; };
 		182DE7D919FBC44400C728AA /* PlaneGameMainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DE7D819FBC44400C728AA /* PlaneGameMainScene.m */; };
 		182DE7E119FBE57C00C728AA /* PlaneGameFighter.m in Sources */ = {isa = PBXBuildFile; fileRef = 182DE7E019FBE57C00C728AA /* PlaneGameFighter.m */; };
+		18460BAB19FF790400F137D5 /* PlaneGameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 18460BAA19FF790400F137D5 /* PlaneGameOverScene.m */; };
+		18460BAE19FF792400F137D5 /* PlaneGameWinScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 18460BAD19FF792400F137D5 /* PlaneGameWinScene.m */; };
 		1893D57019FD138A004EF620 /* PlaneGameBomb.m in Sources */ = {isa = PBXBuildFile; fileRef = 1893D56F19FD138A004EF620 /* PlaneGameBomb.m */; };
 		18A5CCE919FE6C2900FEEBA6 /* PlaneGameBoss.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A5CCE819FE6C2900FEEBA6 /* PlaneGameBoss.m */; };
 /* End PBXBuildFile section */
@@ -75,6 +77,10 @@
 		182DE7D819FBC44400C728AA /* PlaneGameMainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaneGameMainScene.m; sourceTree = "<group>"; };
 		182DE7DF19FBE57C00C728AA /* PlaneGameFighter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaneGameFighter.h; sourceTree = "<group>"; };
 		182DE7E019FBE57C00C728AA /* PlaneGameFighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaneGameFighter.m; sourceTree = "<group>"; };
+		18460BA919FF790400F137D5 /* PlaneGameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaneGameOverScene.h; sourceTree = "<group>"; };
+		18460BAA19FF790400F137D5 /* PlaneGameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaneGameOverScene.m; sourceTree = "<group>"; };
+		18460BAC19FF792400F137D5 /* PlaneGameWinScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaneGameWinScene.h; sourceTree = "<group>"; };
+		18460BAD19FF792400F137D5 /* PlaneGameWinScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaneGameWinScene.m; sourceTree = "<group>"; };
 		1893D56E19FD138A004EF620 /* PlaneGameBomb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaneGameBomb.h; sourceTree = "<group>"; };
 		1893D56F19FD138A004EF620 /* PlaneGameBomb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaneGameBomb.m; sourceTree = "<group>"; };
 		18A5CCE719FE6C2900FEEBA6 /* PlaneGameBoss.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaneGameBoss.h; sourceTree = "<group>"; };
@@ -129,6 +135,10 @@
 				182DE7CA19FBB57900C728AA /* PlaneGameStartScene.m */,
 				182DE7D719FBC44400C728AA /* PlaneGameMainScene.h */,
 				182DE7D819FBC44400C728AA /* PlaneGameMainScene.m */,
+				18460BA919FF790400F137D5 /* PlaneGameOverScene.h */,
+				18460BAA19FF790400F137D5 /* PlaneGameOverScene.m */,
+				18460BAC19FF792400F137D5 /* PlaneGameWinScene.h */,
+				18460BAD19FF792400F137D5 /* PlaneGameWinScene.m */,
 				1827FE7C19FC7F5D00746DFE /* PlaneGameBackground.h */,
 				1827FE7D19FC7F5D00746DFE /* PlaneGameBackground.m */,
 				1827FE7919FC704400746DFE /* PlaneGameStatus.h */,
@@ -300,6 +310,7 @@
 				182DE7A119FBB2A400C728AA /* AppDelegate.m in Sources */,
 				182DE79E19FBB2A400C728AA /* main.m in Sources */,
 				1827FE7E19FC7F5D00746DFE /* PlaneGameBackground.m in Sources */,
+				18460BAB19FF790400F137D5 /* PlaneGameOverScene.m in Sources */,
 				182DE7E119FBE57C00C728AA /* PlaneGameFighter.m in Sources */,
 				182DE7D919FBC44400C728AA /* PlaneGameMainScene.m in Sources */,
 				1827FE7B19FC704400746DFE /* PlaneGameStatus.m in Sources */,
@@ -307,6 +318,7 @@
 				1893D57019FD138A004EF620 /* PlaneGameBomb.m in Sources */,
 				182DE7CB19FBB57900C728AA /* PlaneGameStartScene.m in Sources */,
 				182DE7C819FBB51300C728AA /* PlaneGameViewController.m in Sources */,
+				18460BAE19FF792400F137D5 /* PlaneGameWinScene.m in Sources */,
 				18A5CCE919FE6C2900FEEBA6 /* PlaneGameBoss.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

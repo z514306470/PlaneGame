@@ -19,13 +19,16 @@
 {
     self = [super init];
     if (self) {
-        [self initBackground];
+        self.name = @"background";
+        [self initBackgroundWithImageName:@"hhbg"];
     }
     return self;
 }
 
--(void)initBackground{
-    SKTexture *bgTexture = [SKTexture textureWithImageNamed:@"hhbg"];
+-(void)initBackgroundWithImageName:(NSString *)name{
+    [self removeAllChildren];
+    
+    SKTexture *bgTexture = [SKTexture textureWithImageNamed:name];
     
     SKSpriteNode *mainBg = [SKSpriteNode spriteNodeWithTexture:bgTexture];
     mainBg.position = CGPointMake(ScreenWidth/2, ScreenHeight/2);

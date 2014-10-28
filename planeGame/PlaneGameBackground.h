@@ -10,4 +10,5 @@
 
 @interface PlaneGameBackground : SKNode
 
+-(void)initBackgroundWithImageName:(NSString *)name;
 @end
